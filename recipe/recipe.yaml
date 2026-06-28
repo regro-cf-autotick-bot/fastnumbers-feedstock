@@ -1,6 +1,6 @@
 context:
   name: fastnumbers
-  version: 5.1.1
+  version: "5.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 183fa021cdc052edaeede5c23e3086461deb7562b567614edf71b29515f5fa4b
+  sha256: 07266a2fca9e08eeb5a6c70be4c8db3637db9b930ea5198facbbb9b0b31d4d03
 
 build:
-  number: 1
+  number: 0
   skip: "python_impl == 'pypy'"
   script: python -m pip install . -vv
 
